@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="360.0" minWidth="640.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #212121;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller">
+   <HBox prefHeight="55.0" prefWidth="250.0" style="-fx-background-color: #181828;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+      <ImageView fitHeight="45.0" fitWidth="45.0" onMouseClicked="#closeApp" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets bottom="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+         <Image url="@../icons/exit.png" />
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="userName" prefWidth="166.0" text="name" textFill="#a25ec9e3">
+         <font>
+            <Font size="28.0" />
+         </font>
+         <HBox.margin>
+            <Insets bottom="5.0" top="5.0" />
+         </HBox.margin>
+         <padding>
+            <Insets bottom="5.0" top="5.0" />
+         </padding>
+      </Label>
+   </HBox>
+   <AnchorPane layoutX="265.0" layoutY="5.0" prefHeight="55.0" prefWidth="1010.0" style="-fx-background-color: #232334;" AnchorPane.leftAnchor="265.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+      <Label fx:id="receiver" alignment="CENTER" layoutX="14.0" layoutY="5.0" textFill="#3fe038e3" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </AnchorPane>
+   <ListView fx:id="userListView" layoutX="14.0" layoutY="77.0" onMouseClicked="#selectUser" prefWidth="250.0" style="-fx-background-color: #181828;" styleClass="list-cell" stylesheets="@../styles/userList.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="65.0" />
+   <ScrollPane fx:id="logField" fitToWidth="true" hbarPolicy="NEVER" layoutX="265.0" layoutY="65.0" pickOnBounds="false" style="-fx-background: #232334; -fx-border-color: #232334;" stylesheets="@../styles/text.css" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="265.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="65.0">
+      <VBox fx:id="messages" spacing="5.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </ScrollPane>
+   <TextArea fx:id="messageField" layoutX="282.0" layoutY="583.0" onKeyPressed="#sendMessageFromTextArea" prefHeight="65.0" promptText=" Write message..." style="-fx-background-radius: 50px; -fx-border-radius: 50px;" styleClass="text-area-found" stylesheets="@../styles/text.css" wrapText="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="265.0" AnchorPane.rightAnchor="50.0">
+      <cursor>
+         <Cursor fx:constant="TEXT" />
+      </cursor>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
+   </TextArea>
+   <ImageView fx:id="sendButton" fitHeight="45.0" fitWidth="45.0" layoutX="1225.0" layoutY="658.0" onMouseClicked="#sendMessage" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="5.0">
+      <Image url="@../icons/send.png" />
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </ImageView>
+</AnchorPane>

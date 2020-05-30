@@ -1,0 +1,19 @@
+.text-area-found {
+    -fx-text-fill: silver;
+    -fx-prompt-text-fill: #c3c6ad;
+    -fx-background-color: #1d1e2b;
+    -fx-fill: #1d1e2b;
+    -fx-border-color: #1d1e2b;
+    -fx-font-size: 14px;
+}
+
+.text-area-found .content {
+    -fx-background-color: #1d1e2b;
+    -fx-fill: #1d1e2b;
+    -fx-border-color: #1d1e2b;
+}
+
+.label {
+    -fx-text-fill:aliceblue;
+    -fx-font-size: 14px;
+}
